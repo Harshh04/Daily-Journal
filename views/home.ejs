@@ -1,20 +1,13 @@
-<%- include('partials/header') %>
+<%- include("partials/header"); -%>
 <h1>Home</h1>
 <p><%= startingContent %></p>
 
-<% posts.forEach(function(post){%>
-    <h1><%=post.title%></h1>
-    <!-- String.prototype.trimEllip = function (length) {
-        return this.length > length ? this.substring(0, length) + "..." : this;
-      } -->
-      <% let trimmed = post.content ; 
-      if(post.content.length>100)
-      {
-        trimmed = post.content.substring(0,100) + "..." ;
-      } %>
-    <p><%=trimmed%></p>
-    <a href="/post/<%=post.title%>">Read Full Entry</a>
-<% }) %>
-    
-<%-include('partials/footer')%>
-</posts.length>
+<% posts.forEach(function(post){ %>
+
+<h1><%=post.title%></h1>
+<p>
+	<%=post.content.substring(0, 100) + " ..."%>
+	<a href="/posts/<%=post.id%>">Read More</a>
+</p>
+
+<% }) %> <%- include("partials/footer"); -%>
