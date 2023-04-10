@@ -7,6 +7,11 @@ body {
 	font-family: Arial, sans-serif !important;
 }
 
+p {
+	width: auto;
+	word-wrap: break-word;
+}
+
 .navbar {
 	padding-top: 15px;
 	padding-bottom: 15px;
